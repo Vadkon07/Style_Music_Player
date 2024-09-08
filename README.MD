@@ -14,7 +14,7 @@ Welcome to the **Style Music player**, simple but very powerful music player for
 
 ## Tasks
 
-1. We have to improve slider which we use to scroll music, because he works not very good.
+1. We have to improve slider which we use to scroll music, because he works not very good. Like, now you can only set position by one click on a timeline, but you can scrool it (at all it works).
 2. Make it compatible with formats ass wav, ogg, etc.
 
 ## About last update

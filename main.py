@@ -171,7 +171,7 @@ class MusicPlayer(QWidget):
 
     def set_position(self, position):
         self.is_slider_moving = True
-        mixer.music.play(start=position)
+        mixer.music.set_pos(position)
         self.is_slider_moving = False
 
     def play_music(self):
@@ -183,11 +183,10 @@ class MusicPlayer(QWidget):
             print(music_name[:-4])
             mixer.music.load(current_song_path)
             mixer.music.play()
-        else:
-            print("No item selected")
-
             track_length = mixer.Sound(current_song_path).get_length()
             self.slider.setMaximum(int(track_length))
+        else:
+            print("No item selected")
 
     def set_volume(self, val):
         volume = float(val) / 100
