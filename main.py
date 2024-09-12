@@ -182,7 +182,7 @@ class MusicPlayer(QWidget):
             try:
                 songs = os.listdir(path)
                 for song in songs:
-                    if song.endswith(".mp3"):
+                    if song.endswith((".mp3", ".wav", ".ogg")):
                         self.playlist.addItem(os.path.join(path, song))
             except Exception as e:
                 print(f"An error occurred: {e}")

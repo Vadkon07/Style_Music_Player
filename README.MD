@@ -11,12 +11,12 @@ Welcome to the **Style Music player**, simple but very powerful music player for
 5. Add-free
 6. Cool style (I think it will be nice to listen to Memphis Phonk in this player ahaha)
 7. Playlist
+8. Can play **wav**, **mp3**, **ogg**.
 
 ## Tasks
 
 1. We have to improve slider which we use to scroll music, because he works not very good. Like, now you can only set position by one click on a timeline, but you can scrool it (at all it works).
-2. Make it compatible with formats ass wav, ogg, etc.
 
 ## About last update
 
-I moved GUI of this app from Tkinter to PyQt6, so for now we have to make it more organised. I think that it will be nice to add button as 'play next' and 'play previous', and of course instead of text inside them set minimalistic images.
+I for a little improved slider and also made it compatible with all popular formats of audio.
