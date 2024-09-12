@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="Logo.png" alt="App Logo">
+</p>
 # Style Music Player
 
 Welcome to the **Style Music player**, simple but very powerful music player for your computer! You can use him during study, gaming, coding, workout, etc. The main feature of this player is probably his style. It looks like... these legendary apps on computers from "cyber" movies from 90's, do you remember it?
