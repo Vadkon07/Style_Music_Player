@@ -2,8 +2,9 @@ import sys
 import os
 from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QSlider, QListWidget, QLabel, QFileDialog, QDialog
 from PyQt6.QtCore import Qt, QTimer
-from PyQt6.QtGui import QPixmap, QColor
+from PyQt6.QtGui import QPixmap, QColor, QFontDatabase, QFont
 from pygame import mixer
+
 
 class MusicPlayer(QWidget):
     def __init__(self):
@@ -97,12 +98,29 @@ class MusicPlayer(QWidget):
         layout.addWidget(self.volume_slider)
 
         self.slider = QSlider(Qt.Orientation.Horizontal, self)
-        self.slider.setMinimum(0)
-        self.slider.setMaximum(100)
+        self.slider.setRange(0, 100)
         self.slider.setValue(0)
+        self.slider.setStyleSheet("""
+            QSlider::groove:horizontal {
+                border: 1px solid #999999;
+                height: 3px;
+                background: green;
+            }
+            QSlider::handle:horizontal {
+                background: lime;
+                border: 1px solid #999999;
+                width: 18px;
+                margin: -2px 0;
+                border-radius: 3px;
+            }
+        """)
+
+        #TASK: RENAME SLIDER IN TIMELINE_SLIDER
+
         self.slider.setTickPosition(QSlider.TickPosition.TicksBelow)
         self.slider.setTickInterval(10)
         self.slider.sliderMoved.connect(self.set_position)  
+        layout.addWidget(self.slider)
 
         self.setLayout(layout)
 
